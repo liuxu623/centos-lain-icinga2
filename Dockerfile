@@ -5,7 +5,7 @@ COPY . /Build/
 RUN yum install -y https://packages.icinga.com/epel/icinga-rpm-release-7-latest.noarch.rpm \
     && pip install supervisor \
     && sed -i '/nodocs/d' /etc/yum.conf \
-    && yum install -y icinga2 icinga2-ido-mysql \
+    && yum install -y icinga2-2.6.3 icinga2-ido-mysql-2.6.3 \
     && yum install -y icingaweb2 icingacli \
     && yum install -y msmtp nagios-plugins-all \
     && yum install -y php-pdo php-pdo_mysql \
